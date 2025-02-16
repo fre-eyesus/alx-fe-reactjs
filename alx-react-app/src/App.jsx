@@ -34,9 +34,9 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <WelcomeMessage />
-      <Header/>
-      <Footer/>
-      <MainContent/>
+      <Header />
+      <Footer />
+      <MainContent />
     </>
   )
 }
