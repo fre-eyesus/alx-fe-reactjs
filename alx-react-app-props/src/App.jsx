@@ -7,7 +7,7 @@ import MainContent from './components/MainContent'
 import Footer from './components/Header'
 import UserProfile from './components/UserProfile'
 import Counter from './components/Counter';
-import UserContext from './UserContext';
+import UserContext from './components/UserContext'
 import ProfilePage  from './components/ProfilePage';
 import UserInfo from './components/UserInfo';
 import './App.css'
