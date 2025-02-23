@@ -7,14 +7,22 @@ import MainContent from './components/MainContent'
 import Footer from './components/Header'
 import UserProfile from './components/UserProfile'
 import Counter from './components/Counter';
+import UserContext from './UserContext';
+import ProfilePage  from './components/ProfilePage';
+import UserInfo from './components/UserInfo';
 import './App.css'
 
 
 function App() {
   const [count, setCount] = useState(0)
-
+  
+  const userData = { name: "Fireweld Tesfaye",email: "freyesus12@gmail.com"};
+  
   return (
     <>
+      <UserContext.Provider value={userData}>  {/* Provide the context value */}
+        <ProfilePage />
+      </UserContext.Provider>
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -46,4 +54,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
