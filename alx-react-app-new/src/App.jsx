@@ -6,6 +6,7 @@ import Header from './components/Footer'
 import MainContent from './components/MainContent'
 import Footer from './components/Header'
 import UserProfile from './components/UserProfile'
+import Counter from './components/Counter';
 import './App.css'
 
 
@@ -39,6 +40,8 @@ function App() {
       <Header />
       <Footer />
       <MainContent />
+      <h1>Counter Applicatoin</h1>
+      <Counter />
     </>
   )
 }
