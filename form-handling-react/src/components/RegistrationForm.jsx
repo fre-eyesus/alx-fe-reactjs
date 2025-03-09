@@ -29,7 +29,9 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
+      // Simulate API call
       console.log('Form submitted:', formData);
+      // Reset form
       setFormData({
         username: '',
         email: '',
@@ -45,7 +47,7 @@ const RegistrationForm = () => {
         <input
           type="text"
           name="username"
-          value={formData.username}
+          value={formData.username} // Add value attribute
           onChange={handleChange}
         />
         {errors.username && <span>{errors.username}</span>}
@@ -55,7 +57,7 @@ const RegistrationForm = () => {
         <input
           type="email"
           name="email"
-          value={formData.email}
+          value={formData.email} // Add value attribute
           onChange={handleChange}
         />
         {errors.email && <span>{errors.email}</span>}
@@ -65,7 +67,7 @@ const RegistrationForm = () => {
         <input
           type="password"
           name="password"
-          value={formData.password}
+          value={formData.password} // Add value attribute
           onChange={handleChange}
         />
         {errors.password && <span>{errors.password}</span>}
