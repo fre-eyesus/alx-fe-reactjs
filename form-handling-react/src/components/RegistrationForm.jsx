@@ -29,9 +29,7 @@ const RegistrationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Simulate API call
       console.log('Form submitted:', formData);
-      // Reset form
       setFormData({
         username: '',
         email: '',
