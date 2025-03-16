@@ -6,7 +6,7 @@ function App() {
   return (
     <>
     <UserProfile />
-      <div className="text-center text-gray-700">Hey this is tailwind</div>
+    
     </>
   )
 }
