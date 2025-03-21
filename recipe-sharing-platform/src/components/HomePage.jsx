@@ -42,9 +42,9 @@ function HomePage(){
                                    <h3 className=" text-indigo-950 font-medium text-xl">{food.title}</h3>
                                    <p className="mt-2  text-indigo-950 font-medium text-xl">{food.summary}</p>
                                </div>
-                               <a to={`/recipe/${food.id}`} className="text-blue-500 hover:underline mt-2 block cursor-auto">
+                               <Link to={`/recipe/${food.id}`} className="text-blue-500 hover:underline mt-2 block cursor-auto">
                                                 View Recipe
-                                                </a>
+                                                </Link>
                            </div>
                             ))}
                   </div>
