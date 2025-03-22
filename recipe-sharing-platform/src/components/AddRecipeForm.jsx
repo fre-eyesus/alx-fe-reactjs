@@ -42,9 +42,9 @@ function AddRecipeForm() {
 
   return (
     <>  
-   <form onSubmit={handleSubmit}>
+   <form className='bg-white p-6 rounded-lg shadow-xl max-w-lg mx-auto mt-10' onSubmit={handleSubmit}>
         <div className="container mx-auto p-6">
-            <h3 className="mb-6">Add Recipes below:</h3>
+            <h3 className="mb-6 text-indigo-900 text-xl">Add Recipes below:</h3>
             <input type="text" value={title} onChange={handleInputTitle}
             placeholder='Insert recipe title here...' className="mb-6"/>
             {errors.title && <p className='text-red-500 text-sm mt-0 mb-4'>{errors.title}</p>}
