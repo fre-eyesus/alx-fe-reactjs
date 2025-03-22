@@ -4,7 +4,7 @@ function AddRecipeForm() {
     const [title, setTitle] = useState('')
     const [ingredient, setIngredient] = useState('')
     const [steps, setSteps] = useState('')
-    const [error, setError] = useState({ title: "", ingredient: "", steps: "" })
+    const [errors, setErrors] = useState({ title: "", ingredient: "", steps: "" })
 
     const validateForm = () => {
         const newErrors = { title: "", ingredient: "", steps: "" }
@@ -15,7 +15,7 @@ function AddRecipeForm() {
         
         if (!steps.trim()) newErrors.steps = "Recipe steps is required!"
 
-        setError(newErrors)
+        setErrors(newErrors)
         return Object.values(newErrors).every((e) => e === "")
     }
 
@@ -47,7 +47,7 @@ function AddRecipeForm() {
             <h3 className="mb-6">Add Recipes below:</h3>
             <input type="text" value={title} onChange={handleInputTitle}
             placeholder='Insert recipe title here...' className="mb-6"/>
-            {error.title && <p className='text-red-500 text-sm mt-0 mb-4'>{error.title}</p>}
+            {errors.title && <p className='text-red-500 text-sm mt-0 mb-4'>{errors.title}</p>}
 
             <textarea 
             value={ingredient} 
@@ -55,14 +55,14 @@ function AddRecipeForm() {
             placeholder="Insert recipe ingredient."
            className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />
-            {error.ingredient && <p className='text-red-500 text-sm mt-0 mb-4'>{error.ingredient}</p>}
+            {errors.ingredient && <p className='text-red-500 text-sm mt-0 mb-4'>{errors.ingredient}</p>}
              <textarea 
             value={steps} 
             onChange={handleInputSteps} 
             placeholder="Insert recipe steps.."
            className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />  
-            {error.steps && <p className='text-red-500 text-sm mt-0 mb-4'>{error.steps}</p>} 
+            {errors.steps && <p className='text-red-500 text-sm mt-0 mb-4'>{errors.steps}</p>} 
 
     <button className="p-4 border border-indigo-900 text-indigo-900 text-sm font-bold rounded-md hover:bg-indigo-900 hover:text-white transition block mx-auto mt-4">Submit</button>
     </div>
