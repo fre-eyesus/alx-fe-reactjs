@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function AddRecipeForm() {
     const [title, setTitle] = useState('')
     const [ingredient, setIngredient] = useState('')
-    const [preparation, setPreparation] = useState('')
-    const [error, setError] = useState({ title: "", ingredient: "", preparation: "" })
+    const [steps, setSteps] = useState('')
+    const [error, setError] = useState({ title: "", ingredient: "", steps: "" })
 
     const validateForm = () => {
-        const newErrors = { title: "", ingredient: "", preparation: "" }
+        const newErrors = { title: "", ingredient: "", steps: "" }
         if (!title.trim()) newErrors.title = "Recipe title field is required!"
         if (!ingredient.trim()) {newErrors.ingredient = "Recipe ingeredient field is required!"}
         else if (ingredient.split(",").length < 2) {newErrors.ingredient = 
             "please enter at least two ingredients"}
         
-        if (!preparation.trim()) newErrors.preparation = "Recipe Preparation is required!"
+        if (!steps.trim()) newErrors.steps = "Recipe steps is required!"
 
         setError(newErrors)
         return Object.values(newErrors).every((e) => e === "")
@@ -27,8 +27,8 @@ function AddRecipeForm() {
         setIngredient(e.target.value)
        
     }
-    const handleInputPreparation = (e) => {
-        setPreparation(e.target.value)
+    const handleInputSteps = (e) => {
+        setSteps(e.target.value)
         }
 
     const handleSubmit = (e) => {
@@ -57,12 +57,12 @@ function AddRecipeForm() {
             />
             {error.ingredient && <p className='text-red-500 text-sm mt-0 mb-4'>{error.ingredient}</p>}
              <textarea 
-            value={preparation} 
-            onChange={handleInputPreparation} 
-            placeholder="Insert recipe preparation.."
+            value={steps} 
+            onChange={handleInputSteps} 
+            placeholder="Insert recipe steps.."
            className="w-full h-32 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500"
             />  
-            {error.preparation && <p className='text-red-500 text-sm mt-0 mb-4'>{error.preparation}</p>} 
+            {error.steps && <p className='text-red-500 text-sm mt-0 mb-4'>{error.steps}</p>} 
 
     <button className="p-4 border border-indigo-900 text-indigo-900 text-sm font-bold rounded-md hover:bg-indigo-900 hover:text-white transition block mx-auto mt-4">Submit</button>
     </div>
