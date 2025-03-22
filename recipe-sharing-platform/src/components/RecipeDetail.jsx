@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react"
-
+import { useParams } from "react-router-dom";
 function RecipeDetail(){
     const [recipe, setRecipe] = useState([nul])
     const  [loading, setLoading] = useState(true)

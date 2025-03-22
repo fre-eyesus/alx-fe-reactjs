@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import RecipeDetail from "./RecipeDetail";
 function HomePage(){
     const [recipes, setRecipes] = useState([])
     useEffect(() => {
@@ -31,7 +32,7 @@ function HomePage(){
                                <div 
                                key={food.id} 
                                className="bg-white rounded-xl shadow-md overflow-hidden transform 
-                               transition duration-300 hover:scale-105 hover:shadow-lg"
+                               transition duration-300 hover:scale-105 hover:shadow-lg mx-auto"
                                >
     
                                <img 
