@@ -1,52 +1,61 @@
-Recipe Sharing App 🍳
+# Recipe Sharing App 🍳
 
-A modern, user-friendly platform to browse, share, and explore recipes. This app allows users to discover new dishes, view detailed recipes, and navigate a structured, visually appealing recipe library.
+A modern, user-friendly platform to browse, share, and explore recipes. Discover new dishes, view detailed instructions, and navigate a clean, structured recipe library.
 
-Features
+## Table of Contents
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Run the App](#run-the-app)
+- [Project Structure](#project-structure)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
 
-Browse Recipes – Explore a wide variety of recipes sorted by categories or popularity.
+## Features
+- **Browse Recipes** – Explore a wide variety of recipes by category or popularity.
+- **Recipe Details** – View ingredients, cooking instructions, prep time, and nutrition info.
+- **Search & Filter** – Find recipes by name, ingredient, or category.
+- **Responsive Design** – Optimized for desktop, tablet, and mobile.
+- **User-Friendly UI** – Clean, intuitive navigation.
 
-Recipe Details – View ingredients, cooking instructions, preparation time, and nutritional information.
+## Tech Stack
+- **Front-end:** React.js
+- **Styling:** Tailwind CSS
+- **Data Handling:** Fetch API / Axios
+- **Routing:** React Router
+- **State Management:** React Context API or Redux
 
-Search & Filter – Quickly find recipes by name, ingredient, or category.
+## Getting Started
+### Prerequisites
+- **Node.js** (LTS recommended)
+- **npm** or **yarn**
 
-Responsive Design – Fully optimized for desktop, tablet, and mobile devices.
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/fre-eyesus/alx-fe-reactjs.git
+   ```
+2. Navigate to the app folder:
+   ```bash
+   cd alx-fe-reactjs/recipe-sharing-app
+   ```
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-User-Friendly UI – Clean, intuitive interface for seamless navigation.
-
-Tech Stack
-
-Front-end: React.js
-
-Styling: Tailwind CSS
-
-Data Handling: Fetch API / Axios for consuming recipe data
-
-Routing: React Router
-
-State Management: React Context API or Redux 
-
-Installation
-
-Clone the repository:
-
-git clone https://github.com/fre-yesus/recipe-sharing-app.git
-
-Navigate to the project folder:
-
-cd recipe-sharing-app
-
-Install dependencies:
-
-npm install
-
-Start the development server:
-
+### Run the App
+```bash
 npm start
+```
+Open your browser at: **http://localhost:3000**
 
-Open your browser at http://localhost:3000
-
-Folder Structure
+## Project Structure
+```text
 recipe-sharing-app/
 ├── public/              # Static assets
 ├── src/
@@ -59,40 +68,27 @@ recipe-sharing-app/
 ├── tailwind.config.js   # Tailwind CSS configuration
 ├── package.json
 └── README.md
-Usage
+```
 
-Navigate to the Home Page to browse featured recipes.
+## Usage
+- Open the **Home** page to browse featured recipes.
+- Select a recipe to view ingredients, steps, and tips.
+- Use the search bar to find recipes by name or main ingredient.
+- Filter recipes by category (e.g., Breakfast, Dinner, Dessert).
 
-Click on a recipe to view details including ingredients, steps, and tips.
+## Roadmap
+- **User Accounts** – Profiles with saved favorites.
+- **Recipe Upload** – Let users submit recipes.
+- **Ratings & Reviews** – Community feedback.
+- **Dark Mode** – Optional theme for night browsing.
 
-Use the search bar to find recipes by name or main ingredients.
+## Contributing
+Contributions are welcome!
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/YourFeature`
+3. Commit your changes: `git commit -m "Add your feature"`
+4. Push to the branch: `git push origin feature/YourFeature`
+5. Open a Pull Request
 
-Filter recipes by category (e.g., Breakfast, Dinner, Dessert).
-
-Future Enhancements
-
-User Accounts: Allow users to create profiles and save favorite recipes.
-
-Recipe Upload: Enable users to submit their own recipes.
-
-Rating & Reviews: Let users rate and leave comments on recipes.
-
-Dark Mode: Optional theme for comfortable night browsing.
-
-Contributing
-
-Contributions are welcome! Feel free to:
-
-Fork the repository
-
-Create a new branch (git checkout -b feature/YourFeature)
-
-Commit your changes (git commit -m 'Add your feature')
-
-Push to the branch (git push origin feature/YourFeature)
-
-Open a Pull Request
-
-License
-
+## License
 This project is licensed under the MIT License.
